@@ -42,6 +42,22 @@ button:focus {
     background-color: rgba(165, 84, 154, 0.84);
 }
 
+.upperBar {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 71px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 24px;
+    color: #fff;
+    /* background: linear-gradient(to right, rgba(165, 84, 154, 0.84), rgba(13, 62, 197, 0.8)); */
+
+    margin-bottom: 95px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
 
 .row>div>a>img {
     height: 50px;
@@ -69,10 +85,39 @@ button:focus {
 
 .fixed-action-btn {
     position: fixed;
-    right: 23px;
+    right: 40px;
     bottom: 105px;
     padding-top: 15px;
     margin-bottom: 0;
     z-index: 997;
 }
 
+.loginmenu {
+    top: 1px;
+    bottom: unset;
+}
+
+.loginmenu > h6 {
+    margin-top: -10px;
+    text-transform: capitalize;
+}
+
+.wsloginarea {
+    margin-top: 90px;
+    padding-right: 10px;
+    /* font-family: 'Herr Von Muellerhoff', cursive;
+    font-family: 'Mr De Haviland', cursive;
+    font-family: 'Calligraffitti', cursive; */
+    font-family: 'Italianno', cursive;
+    text-transform: capitalize;
+}
+
+.wsloginarea>h5>span {
+    font-weight: 400;
+}
+
+.userlog{
+    font-size: 57px;
+    color: #8c6cb7;
+    padding-right: 8px;
+}

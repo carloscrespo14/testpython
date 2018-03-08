@@ -4,4 +4,5 @@ from django.http import HttpResponse
 # Create your views here.
 
 def agenda_view(request):
-    return HttpResponse('Agenda')
+    loginUser = request.user
+    return render(request,'agenda_contactos_template.html',{'loginUser': loginUser})

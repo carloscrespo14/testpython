@@ -18,6 +18,9 @@ gunicorn = "*"
 dj-database-url = "*"
 whitenoise = "*"
 requests = "*"
+djangorestframework = "*"
+markdown = "*"
+django-filter = "*"
 
 
 [dev-packages]

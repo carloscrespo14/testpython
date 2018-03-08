@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Calligraffitti|Herr+Von+Muellerhoff|Italianno|Mr+De+Haviland" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/main.css'%}">
-     {%block title%}
+    {%block title%}
     <title>Agenda</title>
     {% endblock %}
 </head>
@@ -25,22 +25,15 @@
             </div>
 
             <div class="col s6 right-align">
-                <div class="fixed-action-btn horizontal loginmenu">
-                    <a class="btn-floating btn-large eigold">
-                        <i class="material-icons useri">person</i>
+                <div class="loginmenu">
+                    <a href="">
+                        <i class="material-icons userlog">account_circle</i>
                     </a>
-                    <ul>
-                        <li>
-                            <a class="btn-floating grey" href="">
-                                <i class="material-icons">reply</i>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="btn-floating grey darken-1">
-                                <i class="material-icons">settings</i>
-                            </a>
-                        </li>
-                    </ul>
+                     {% if user.is_authenticated %}
+                    <h6 class="right-align grey-text">
+                        <span>{{ user.get_full_name }} </span>
+                    </h6>
+                    {% endif %}
                 </div>
             </div>
 
@@ -62,6 +55,7 @@
                     </li>
                 </ul>
             </div>
+
         </div>
         {% endblock %} 
         {% block content %} 
