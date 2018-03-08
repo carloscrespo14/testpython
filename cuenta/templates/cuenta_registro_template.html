@@ -1,5 +1,68 @@
 {% extends "base.html" %} 
-{% load staticfiles %} 
+{% load staticfiles %}
+{% block header %}
+{% endblock %} 
 {% block content %}
-    <h6>registro de cuentas</h6>
+    <div class="container loginBody">
+        <h3 class="center grey-text">Create your user Account</h3>
+        <div class="row">
+            <div class="col l6 s12">
+                <br>
+                <h5 class="center grey-text">Una Cuenta es todo lo que necesitas</h5>
+                <p class="grey-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum illo exercitationem unde nobis libero adipisci
+                    mollitia magni iste reprehenderit sit neque excepturi at aperiam quasi omnis, fuga reiciendis velit blanditiis.</p>
+                <p class="grey-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum illo exercitationem unde nobis libero adipisci mollitia magni
+                    iste reprehenderit sit neque excepturi at aperiam quasi omnis, fuga reiciendis velit blanditiis.</p>
+        
+            </div>
+            <div class="col l6 s12 singupBox">
+                <form method="post">
+                    {% csrf_token %}
+    
+                    <div class="row">
+                        <div class="input-field col l6 s12">
+                            <input type="text" name='first_name'>
+                            <label for="first_name">Nombres</label>
+                        </div>
+                        <div class="input-field col l6 s12">
+                            <input type="text" name='last_name'>
+                            <label for="last_name">Apellidos</label>
+                        </div>
+                    </div>
+    
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name='username'>
+                            <label for="first_name">Nombre de usuario</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="text" name='email'>
+                            <label for="first_name">Email</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="password" name='password1'>
+                            <label for="password1">Crear Contraseña</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input type="password" name='password2'>
+                            <label for="password2">Confirmar Contraseña</label>
+                        </div>
+                    </div>
+    
+                    <div class="row right-align">
+                        <button class="btn waves-effect waves-light" type="submit">
+                            Registrarse
+                        </button>
+                    </div>
+    
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

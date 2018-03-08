@@ -1,3 +1,14 @@
-body{
-    background: #333;
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+   
+}
+
+main {
+    flex: 1 0 auto;
+    background: rgb(245, 245, 245);
+    background-image: url(https://rh-eigo.azurewebsites.net/static/account/img/bg4.jpg) !important;
+    background-position: center;
+    background-size: cover;
 }
