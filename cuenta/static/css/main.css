@@ -12,3 +12,75 @@ main {
     background-position: center;
     background-size: cover;
 }
+
+.page-footer {
+    padding-top: 20px;
+    color: #fff;
+    background: linear-gradient(to right, rgba(165, 84, 154, 0.84), rgba(13, 62, 197, 0.8));
+}
+
+.btn,
+.btn-large {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(13, 62, 197, 0.8);
+    text-align: center;
+    letter-spacing: .5px;
+    -webkit-transition: .2s ease-out;
+    transition: .2s ease-out;
+    cursor: pointer;
+}
+
+button:focus {
+    outline: none;
+    background-color: rgba(165, 84, 154, 0.84);
+}
+
+.btn:hover,
+.btn-large:hover {
+    background-color: rgba(165, 84, 154, 0.84);
+}
+
+.upperBar {
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    color: #fff;
+    background: linear-gradient(to right, rgba(165, 84, 154, 0.84), rgba(13, 62, 197, 0.8));
+    /* background-color: #3c4356; */
+    margin-bottom: 95px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.row>div>a>img {
+    height: 50px;
+}
+
+.loginBody {
+   margin-top: 130px;
+}
+
+.loginBox{
+    margin: auto auto;
+    margin-top: 20vh;
+    max-width: 450px;
+    padding-top: 20px;
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(236, 226, 232));
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.fixed-action-btn {
+    position: fixed;
+    right: 23px;
+    bottom: 105px;
+    padding-top: 15px;
+    margin-bottom: 0;
+    z-index: 997;
+}
