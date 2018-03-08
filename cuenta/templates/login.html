@@ -11,39 +11,43 @@
                 <form method="post">
                     {% csrf_token %}
                     <div class="row">
+                        <div class="input-field col s12 center">
+                        
+                                <i class="material-icons loginIco">account_circle</i>
+                               
+                        </div>
+                    </div>
+                    <div class="row">
                         <div class="input-field col s12">
                             <input type="text" name='username'>
-                            <label for="first_name">username</label>
+                            <label for="first_name">Usuario</label>
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <input type="password" name='password'>
-                            <label for="password">Password</label>
+                            <label for="password">Contraseña</label>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="input-field col s6">
+                        <div class="input-field col s12">
                             <button class="btn waves-effect waves-light" type="submit">
-                                Log In
+                                Iniciar Sesion
                             </button>
-
+                            
                         </div>
-                        <div class="input-field col s6">
-                            <p class="center">
-                                <a href="">Sing Up</a>
-                            </p>
-
-                        </div>
+                        
                     </div>
                     <div class="row">
-                        <!-- <div class="input-field col s12">
-                            <p class="">
-                                <a href="">RECUPERAR PASSWORD</a>
+                        <div class="input-field col s12">
+                            <p class="center">
+                                <span class="grey-text">Nuevo con nostros?</span>
+                                <a href="{% url 'cuenta:registro_usuarios'%}">Registrarme</a>
                             </p>
-                    
-                        </div> -->
+                            
+                        </div>
                     </div>
+                    <br>
 
                 </form>
             </div>

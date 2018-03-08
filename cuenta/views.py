@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
@@ -12,6 +12,7 @@ def cuenta_registro_view(request):
         if form.is_valid():
             user = form.save()
             login(request,user)
+            return redirect('agenda:lista')
     else:        
         form = registroForm()
     return render(request,'cuenta_registro_template.html')
