@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% load staticfiles %} {%block title%}
+<title>Agenda | Contactos</title>
+{% endblock %} 
+{% block content %}
+<div class="container wsArea center">
+    <form method="post">
+        {% csrf_token %}
+        <br>
+        <h5>¿ Desea Eliminar el registro de {{ contacto.nombre }}, {{ contacto.apellidos }} ?</h5>
+        <img src="https://placeimg.com/120/120/animals" alt="" class="circle">
+        <br>
+        <button class="btn waves-effect waves-light" type="submit">
+            Si, eliminar
+        </button>
+        <a class="waves-effect waves-light btn" href="{% url 'agenda:lista'%}">
+            No, cancelar
+        </a>
+    </form>
+</div>
+{% endblock %}

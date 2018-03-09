@@ -4,9 +4,28 @@
 <title>Agenda | Contactos</title>
 {% endblock %}
 {% block content %}
-
-<div class="container wsArea">
-
-    
-</div>
+    <div class="container wsArea">
+        <!--  {% if contactos %}      
+            <ul class="collection">
+                {% for contacto in contactos %}
+                <li class="collection-item avatar">
+                    <img src="https://placeimg.com/84/68/persons" alt="" class="circle">
+                    <span class="title">{{contacto.nombre}}, {{contacto.apellidos}}</span>
+                    <p>{{ contacto.correo }}
+                        <br> {{ contacto.organizacion }}
+                    </p>
+                    <a href="" class="secondary-content">
+                        <i class="material-icons">edit</i>
+                    </a>
+                    <br>
+                    <a href="{% url 'agenda:eliminar' contacto.id %}" class="secondary-content eliminar">
+                        <i class="material-icons">delete</i>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>       
+        {% else %}
+        <h3 class="center">No se encontraron Registros</h3>
+        {% endif %}     -->
+    </div>
 {% endblock %}

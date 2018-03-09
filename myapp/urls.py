@@ -23,5 +23,7 @@ urlpatterns = [
     path('agenda/', include('agenda.urls'), name='agenda'),
     path('cuenta/', include('cuenta.urls'), name='cuenta'),
     path('api/agenda/', include('api.urls'), name='api_contacto'),
-    path('', login, {'template_name': 'login.html'}, name='login'),
+    path('', login, {'template_name': 'login.html'}, name='flogin'),
+    path('accounts/login/', login, {'template_name': 'login.html'}, name='login'),
+    path('logout/', logout_then_login, name='logout'),
 ]

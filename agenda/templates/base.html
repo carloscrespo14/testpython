@@ -18,15 +18,12 @@
         {% block header%}
         <div class="upperBar row">
 
-            <div class="col s6 left-align">
-                <a href="">
-                    <img src="" alt="">
-                </a>
+            <div class="col s6 left-align">             
             </div>
 
             <div class="col s6 right-align">
                 <div class="loginmenu">
-                    <a href="">
+                    <a href="{% url 'logout' %}">
                         <i class="material-icons userlog">account_circle</i>
                     </a>
                      {% if user.is_authenticated %}
@@ -37,23 +34,11 @@
                 </div>
             </div>
 
-            <div class="fixed-action-btn">
-                <a class="btn-floating btn-large eigold">
-                    <i class="material-icons">menu</i>
-                </a>
-                <ul>
-                    <li>
-                        <a class="btn-floating red" href="">
-                            <i class="material-icons">insert_chart</i>
-                        </a>
-                    </li>
 
-                    <li>
-                        <a class="btn-floating blue" href="">
-                            <i class="material-icons">file_upload</i>
-                        </a>
-                    </li>
-                </ul>
+            <div class="fixed-action-btn">
+                <a class="btn-floating btn-large waves-effect waves-light eigold" href="{% url 'agenda:agregar' %}">
+                    <i class="material-icons">person_add</i>
+                </a>
             </div>
 
         </div>

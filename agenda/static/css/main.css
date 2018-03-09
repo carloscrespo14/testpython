@@ -52,11 +52,12 @@ button:focus {
     left: 0;
     padding: 24px;
     color: #fff;
-    /* background: linear-gradient(to right, rgba(165, 84, 154, 0.84), rgba(13, 62, 197, 0.8)); */
+    background: #fff;
 
     margin-bottom: 95px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
     0 1px 2px rgba(0, 0, 0, 0.24);
+    z-index: 1000;
 }
 
 .row>div>a>img {
@@ -120,4 +121,12 @@ button:focus {
     font-size: 57px;
     color: #8c6cb7;
     padding-right: 8px;
+}
+
+.wsArea{
+    margin-top: 95px;
+}
+
+.eliminar {
+    margin-top: 30px;
 }

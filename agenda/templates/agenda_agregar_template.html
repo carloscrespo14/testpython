@@ -1,0 +1,103 @@
+{% extends "base.html" %} 
+{% load staticfiles %} 
+{%block title%}
+<title>Agenda | Agregar</title>
+{% endblock %} {% block content %}
+
+<div class="container wsArea">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <h4 class="center grey-text">Crear Nuevo Contacto</h4>
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">account_circle</i>
+                <input type="text" name='nombre'>
+                <label for='nombre'>
+                    Nombre
+                </label>
+            </div>
+            <div class="input-field col s6">
+                <input type="text" name='apellidos'>
+                <label for='apellidos'>
+                    Apellidos
+                </label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input type="text" name='correo'>
+                <label for='correo'>
+                    Correo Electronico
+                </label>
+            </div>
+            <div class="input-field col s12">
+                <i class="material-icons prefix">business</i>
+                <input type="text" name='organizacion'>
+                <label for='organizacion'>
+                    Organizacion
+                </label>
+            </div>
+        </div>
+        
+        
+        <!-- {{form2.as_p}}
+        {{form3.as_p}} -->
+
+        <div class="row">
+            <div class="input-field col s3">
+                <i class="material-icons prefix">phone</i>
+                <select name='tipo'>
+                    <option value="" disabled selected>Escoge una</option>
+                    <option value="C">Celular</option>
+                    <option value="P">Particular</option>
+                    <option value="L">Laboral</option>
+                    <option value="F">Principal</option>
+                    <option value="O">Otros</option>
+        
+                </select>
+                <label>Tipo</label>
+            </div>
+            <div class="input-field col s9">
+                <input type="text" name='numero'>
+                <label for='numero'>
+                   Numero
+                </label>
+            </div>
+            <input type="hidden" name="twner" value="{{user.get_username}}">
+        
+        </div>
+        
+    
+    
+       <div class="row">
+            <div class="input-field col s3">
+                <i class="material-icons prefix">phonelink_ring</i>
+                <select name='red'>
+                    <option value="" disabled selected>Escoge una</option>
+                    <option value="FB">Facebook</option>
+                    <option value="TW">Twitter</option>
+                    <option value="IN">Instagram</option>
+                    <option value="YT">Youtube</option>
+                    <option value="OT">Otros</option>
+                     
+                </select>
+                <label>Redes Sociales</label>
+            </div>
+            <div class="input-field col s9">
+                <input type="text" name='urln'>
+                <label for='urln'>
+                    Direccion
+                </label>
+            </div>
+            <input type="hidden" name="swner" value="{{user.get_username}}">
+        </div>
+        
+        
+        <div class="col s12 right-align">
+            <button class="btn waves-effect waves-light" type="submit">
+                Guardar
+            </button>
+        </div>
+    </form>
+
+</div>
+{% endblock %}
